@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laundry Services</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Optional EmailJS (only needed if you want real emails) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav" id="top">
+    <div class="nav-inner">
+      <div class="logo">
+        <div class="logo-badge">LS</div>
+        <span>Laundry<span class="accent">Services</span></span>
+      </div>
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#booking">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="user-pill" id="userName">userName</div>
+      <button class="burger" id="burger" aria-label="Toggle Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <div>
+      <h1 class="headline">
+        Revitalize Your Clothes with <span class="accent">Expert Laundry Services!</span>
+      </h1>
+      <p class="sub">
+        From premium dry cleaning to swift wash and fold, we deliver care and convenience.
+        Schedule a pickup and rediscover the freshness of your clothes today.
+      </p>
+      <a class="cta" href="#booking">Book a Service Today</a>
+    </div>
+    <img alt="Laundry illustration" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1280&auto=format&fit=crop" />
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat"><div class="big">15+</div><div class="label">Laundry Services</div></div>
+      <div class="stat"><div class="big">240+</div><div class="label">Happy Customers</div></div>
+      <div class="stat"><div class="big">2+ Years</div><div class="label">Experience</div></div>
+    </div>
+  </div>
+
+  <!-- BOOKING -->
+  <section class="container" id="booking">
+    <h2 class="section-title">Booking Services</h2>
+    <div class="booking">
+      <!-- Service List -->
+      <div class="card">
+        <h3>Our Services</h3>
+        <p class="note">Click <strong>Add Item</strong> to add services to your cart.</p>
+        <div id="servicesList" class="list"></div>
+        <p class="note">Add items to the cart and book now.</p>
+      </div>
+
+      <!-- Cart -->
+      <div class="card cart">
+        <h3>Added Items</h3>
+        <div style="overflow:auto">
+          <table>
+            <thead>
+              <tr><th>S/No</th><th>Service Name</th><th>Price</th></tr>
+            </thead>
+            <tbody id="cartBody">
+              <tr><td colspan="3" style="color:#64748b">No items added yet.</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td></td><td>Total Amount</td><td id="totalCell">₹0</td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <h3>Book Now</h3>
+        <form id="bookForm">
+          <div class="form-grid">
+            <input required id="fullName" name="fullName" placeholder="Full name" />
+            <input required id="email" name="email" type="email" placeholder="Email" />
+            <input required id="phone" name="phone" type="tel" placeholder="Phone number" />
+          </div>
+          <button class="cta" type="submit" style="margin-top:12px; width:100%">Book now</button>
+          <p id="bookMsg" class="note" style="margin-top:10px"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="container" id="about">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="qualities">
+      <div class="quality"><strong>Premium Services</strong><br/>Delicate care and eco-friendly detergents.</div>
+      <div class="quality"><strong>Quick Support</strong><br/>Fast responses and clear communication.</div>
+      <div class="quality"><strong>Timely Delivery</strong><br/>Reliable pick-ups and returns—every time.</div>
+      <div class="quality"><strong>Affordable Prices</strong><br/>Transparent pricing with no hidden fees.</div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="container" id="contact">
+    <div class="newsletter">
+      <div style="font-weight:900; font-size:22px">Subscribe to our newsletter</div>
+      <form id="newsForm" class="row">
+        <input required name="newsName" placeholder="Full name" />
+        <input required type="email" name="newsEmail" placeholder="Email" />
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+      <div id="newsMsg" style="font-size:14px"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="foot-title">Logo</div>
+        <p class="note">Laundry services with care, speed, and affordability.</p>
+      </div>
+      <div>
+        <div class="foot-title">Important Links</div>
+        <div><a href="#about">About Us</a></div>
+        <div><a href="#contact">Contact</a></div>
+        <div><a href="#">Privacy Policy</a></div>
+        <div><a href="#">Terms of Service</a></div>
+      </div>
+      <div>
+        <div class="foot-title">Contact Us</div>
+        <div>+91 90000 00000</div>
+        <div>help@laundryservice.com</div>
+      </div>
+      <div>
+        <div class="foot-title">Follow Us</div>
+        <div class="socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Laundry Services. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
